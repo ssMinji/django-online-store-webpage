@@ -1,0 +1,102 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Oh! My Grocery</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href='{% static "shopapp/vendor/bootstrap/css/bootstrap.min.css" %}' rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href='{% static "shopapp/vendor/fontawesome-free/css/all.min.css" %}' rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href= '{% static "shopapp/css/agency.min.css" %}' rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'main_page' %}">O!M!G!</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{% url 'main_page' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#analyse">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Signin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="services">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h2 class="section-heading text-uppercase">CHARTS</h2>
+                  <h3 class="section-subheading text-muted">We have awesome charts!</h3>
+                </div>
+              </div>
+              <div class="row text-center">
+                <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                    <a href = "{% url 'chart_page' %}">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-chart-area fa-stack-1x fa-inverse"></i>
+                    </a>
+                  </span>
+                  <h4 class="service-heading">Ratio of VIP reorder</h4>
+                  <p class="text-muted">Do you want to know what kinds of products our VIPs usually buy in our website?</p>
+                </div>
+                <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                    <a href = "{% url 'vip_aisle_page' %}">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-chart-pie fa-stack-1x fa-inverse"></i>
+                    </a>
+                  </span>
+                  <h4 class="service-heading">Product Categories <br>VIP purchased</h4>
+                  <p class="text-muted">We show pie chart that visualizes which products is mostly purchased by VIPs. </p>
+                </div>
+                <div class="col-md-4">
+                  <span class="fa-stack fa-4x">
+                    <a href = "{% url 'order_dow_page' %}">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-chart-bar fa-stack-1x fa-inverse"></i>
+                    </a>
+                  </span>
+                  <h4 class="service-heading">Order Count by Hour&Day</h4>
+                  <p class="text-muted">You will see that which hour & day our customers usually make a purchase.</p>
+                </div>
+              </div>
+            </div>
+          </section>
